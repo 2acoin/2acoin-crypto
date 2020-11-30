@@ -1,18 +1,18 @@
-![image](https://user-images.githubusercontent.com/34389545/35821974-62e0e25c-0a70-11e8-87dd-2cfffeb6ed47.png)
+![image](https://i.imgur.com/TvgbIeA.png)
 
-# TurtleCoin: Standalone Cryptography Library
+# 2ACoin: Standalone Cryptography Library
 
-[![NPM](https://nodei.co/npm/turtlecoin-crypto.png?downloads=true&stars=true)](https://nodei.co/npm/turtlecoin-crypto/)
+[![NPM](https://nodei.co/npm/2acoin-crypto.png?downloads=true&stars=true)](https://nodei.co/npm/2acoin-crypto/)
 
-![Prerequisite](https://img.shields.io/badge/node-%3E%3D6-blue.svg) [![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)](https://github.com/turtlecoin/turtlecoin-crypto/graphs/commit-activity) [![License: GPL-3.0](https://img.shields.io/badge/License-GPL--3.0-yellow.svg)](https://github.com/turtlecoin/turtlecoin-crypto/blob/master/LICENSE) [![Twitter: TurtlePay](https://img.shields.io/twitter/follow/_TurtleCoin.svg?style=social)](https://twitter.com/_TurtleCoin)
+![Prerequisite](https://img.shields.io/badge/node-%3E%3D6-blue.svg) [![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)](https://github.com/2acoin/2acoin-crypto/graphs/commit-activity) [![License: GPL-3.0](https://img.shields.io/badge/License-GPL--3.0-yellow.svg)](https://github.com/2acoin/2acoin-crypto/blob/master/LICENSE) [![Twitter: TurtlePay](https://img.shields.io/twitter/follow/_TurtleCoin.svg?style=social)](https://twitter.com/_TurtleCoin)
 
 #### Master Build Status
-[![Build Status](https://github.com/turtlecoin/turtlecoin-crypto/workflows/CI%20Build%20Tests/badge.svg?branch=master)](https://github.com/turtlecoin/turtlecoin-crypto/actions)
+[![Build Status](https://github.com/2acoin/2acoin-crypto/workflows/CI%20Build%20Tests/badge.svg?branch=master)](https://github.com/2acoin/2acoin-crypto/actions)
 
 #### Development Build Status
-[![Build Status](https://github.com/turtlecoin/turtlecoin-crypto/workflows/CI%20Build%20Tests/badge.svg?branch=development)](https://github.com/turtlecoin/turtlecoin-crypto/actions)
+[![Build Status](https://github.com/2acoin/2acoin-crypto/workflows/CI%20Build%20Tests/badge.svg?branch=development)](https://github.com/2acoin/2acoin-crypto/actions)
 
-This repository contains the necessary files to compile the cryptography library used within [TurtleCoin](https://turtlecoin.lol) as a standalone library that can be included in various other projects in a variety of development environments, including:
+This repository contains the necessary files to compile the cryptography library used within [2ACoin](https://2acoin.org) as a standalone library that can be included in various other projects in a variety of development environments, including:
 
 * Node.js >= 6.x
 * C++
@@ -41,13 +41,13 @@ Read very careful if you want this to work right the first time.
 ### Installation
 
 ```bash
-npm install turtlecoin-crypto
+npm install 2acoin-crypto
 ```
 
 ### Intialization
 
 ```javascript
-const TurtleCoinCrypto = require('turtlecoin-crypto')
+const 2ACoinCrypto = require('2acoin-crypto')
 ```
 
 ## C++ Library
@@ -69,15 +69,15 @@ sudo add-apt-repository ppa:ubuntu-toolchain-r/test -y
 sudo apt-get update
 sudo apt-get install aptitude -y
 sudo aptitude install -y build-essential git cmake
-git clone -b master --single-branch https://github.com/turtlecoin/turtlecoin-crypto
-cd turtlecoin-crypto
+git clone -b master --single-branch https://github.com/2acoin/2acoin-crypto
+cd 2acoin-crypto
 mkdir build
 cd build
 cmake ..
 make -j
 ```
 
-The static library will be built as `libturtlecoin-crypto.a` in the build folder.
+The static library will be built as `lib2acoin-crypto.a` in the build folder.
 
 ##### Ubuntu, using Clang
 
@@ -104,8 +104,8 @@ sudo aptitude install -y -o Aptitude::ProblemResolver::SolutionCost='100*cancele
 sudo aptitude install build-essential clang-6.0 libstdc++-7-dev git cmake
 export CC=clang-6.0
 export CXX=clang++-6.0
-git clone -b master --single-branch https://github.com/turtlecoin/turtlecoin-crypto
-cd turtlecoin-crypto
+git clone -b master --single-branch https://github.com/2acoin/2acoin-crypto
+cd 2acoin-crypto
 mkdir build
 cd build
 cmake ..
@@ -114,7 +114,7 @@ make -j
 
 The following library files will be created in the `build` folder:
 
-* `libturtlecoin-crypto-static.a`
+* `lib2acoin-crypto-static.a`
 
 ##### Generic Linux
 
@@ -124,8 +124,8 @@ If you want to use clang, ensure you set the environment variables `CC` and `CXX
 See the ubuntu instructions for an example.
 
 ```bash
-git clone -b master --single-branch https://github.com/turtlecoin/turtlecoin-crypto
-cd turtlecoin-crypto
+git clone -b master --single-branch https://github.com/2acoin/2acoin-crypto
+cd 2acoin-crypto
 mkdir build
 cd build
 cmake ..
@@ -134,7 +134,7 @@ make -j
 
 The following library files will be created in the `build` folder:
 
-* `libturtlecoin-crypto-static.a`
+* `lib2acoin-crypto-static.a`
 
 #### OSX/Apple, using Clang
 
@@ -149,8 +149,8 @@ which brew || /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/H
 brew install --force cmake boost llvm
 export CC=/usr/local/opt/llvm/bin/clang
 export CXX=/usr/local/opt/llvm/bin/clang++
-git clone -b master --single-branch https://github.com/turtlecoin/turtlecoin-crypto
-cd turtlecoin-crypto
+git clone -b master --single-branch https://github.com/2acoin/2acoin-crypto
+cd 2acoin-crypto
 mkdir build
 cd build
 cmake ..
@@ -159,7 +159,7 @@ make
 
 The following library files will be created in the `build` folder:
 
-* `libturtlecoin-crypto-static.a`
+* `lib2acoin-crypto-static.a`
 
 #### Windows
 
@@ -172,7 +172,7 @@ The following library files will be created in the `build` folder:
 
 - From the start menu, open 'x64 Native Tools Command Prompt for vs2017'.
 ```
-cd <your_turtlecoin-crypto_directory>
+cd <your_2acoin-crypto_directory>
 mkdir build
 cd build
 set PATH="C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin";%PATH%
@@ -181,13 +181,13 @@ cmake -G "Visual Studio 15 2017 Win64" ..
 
 **Note:** If you have errors on this step about not being able to find the some libraries, you may need to update your cmake. Open 'Visual Studio Installer' and click 'Update'.
 
-`MSBuild turtlecoin-crypto.sln /p:Configuration=Release /m`
+`MSBuild 2acoin-crypto.sln /p:Configuration=Release /m`
 
 The following library files will be created in the `build/Release` folder:
 
-* `turtlecoin-crypto-static.lib`
-* `turtlecoin-crypto-shared.lib`
-* `turtlecoin-crypto-shared.dll`
+* `2acoin-crypto-static.lib`
+* `2acoin-crypto-shared.lib`
+* `2acoin-crypto-shared.dll`
 
 ## Native Javascript & WASM
 
@@ -198,8 +198,8 @@ You will need the following packages: CMake (2.8 or higher), make, and git.
 ### Compiling
 
 ```bash
-git clone -b master --single-branch https://github.com/turtlecoin/turtlecoin-crypto
-cd turtlecoin-crypto
+git clone -b master --single-branch https://github.com/2acoin/2acoin-crypto
+cd 2acoin-crypto
 bash ./build_js.sh
 ```
 
@@ -208,21 +208,22 @@ This script will install the necessary dependencies on your machine and then pro
 The following library files will be created in the `jsbuild` folder:
 
 * Native Javascript
-  * `turtlecoin-crypto.js`
+  * `2acoin-crypto.js`
 * WASM
-  * `turtlecoin-crypto-wasm.js`
+  * `2acoin-crypto-wasm.js`
 
 ## Thanks
 Cryptonote Developers, Bytecoin Developers, Monero Developers, Forknote Project, TurtleCoin Community
 
 ## Copypasta for license when editing files
 
-Hi TurtleCoin contributor, thanks for forking and sending back Pull Requests. Extensive docs about contributing are in the works or elsewhere. For now this is the bit we need to get into all the files we touch. Please add it to the top of the files.
+Hi 2ACoin contributor, thanks for forking and sending back Pull Requests. Extensive docs about contributing are in the works or elsewhere. For now this is the bit we need to get into all the files we touch. Please add it to the top of the files.
 
 ```
 // Copyright (c) 2012-2017, The CryptoNote developers, The Bytecoin developers
 // Copyright (c) 2014-2018, The Monero Project
 // Copyright (c) 2018-2019, The TurtleCoin Developers
+// Copyright (c) 2019-2020, The 2ACoin Team
 //
 // Please see the included LICENSE file for more information.
 ```
