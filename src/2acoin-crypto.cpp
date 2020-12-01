@@ -1,10 +1,11 @@
 // Copyright (c) 2018-2019, The TurtleCoin Developers
+// Copyright (c) 2019-2020, The 2ACoin Team
 //
 // Please see the included LICENSE file for more information.
 
 #include <StringTools.h>
 #include <string.h>
-#include <turtlecoin-crypto.h>
+#include <2acoin-crypto.h>
 
 #ifndef NO_CRYPTO_EXPORTS
 #ifdef _WIN32

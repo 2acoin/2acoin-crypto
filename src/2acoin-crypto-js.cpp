@@ -1,11 +1,12 @@
 // Copyright (c) 2018-2019, The TurtleCoin Developers
+// Copyright (c) 2019-2020, The 2ACoin Team
 //
 // Please see the included LICENSE file for more information.
 
 #include <emscripten/bind.h>
 #include <stdio.h>
 #include <stdlib.h>
-#include <turtlecoin-crypto.h>
+#include <2acoin-crypto.h>
 
 using namespace emscripten;
 

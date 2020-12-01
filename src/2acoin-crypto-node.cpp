@@ -1,11 +1,12 @@
 // Copyright (c) 2018-2019, The TurtleCoin Developers
+// Copyright (c) 2019-2020, The 2ACoin Team
 //
 // Please see the included LICENSE file for more information.
 
 #include <iostream>
 #include <nan.h>
 #include <stdio.h>
-#include <turtlecoin-crypto.h>
+#include <2acoin-crypto.h>
 #include <v8.h>
 
 using BinaryArray = std::vector<uint8_t>;

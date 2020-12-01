@@ -1,4 +1,5 @@
 // Copyright (c) 2018-2019, The TurtleCoin Developers
+// Copyright (c) 2019-2020, The 2ACoin Team
 //
 // Please see the included LICENSE file for more information.
 
@@ -7,7 +8,7 @@
 const assert = require('assert')
 const describe = require('mocha').describe
 const it = require('mocha').it
-const TurtleCoinCrypto = require('../jsbuild/turtlecoin-crypto')()
+const TurtleCoinCrypto = require('../jsbuild/2acoin-crypto')()
 
 describe('Core Cryptography', () => {
   it('Generate Random Keys', () => {
