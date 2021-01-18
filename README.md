@@ -4,7 +4,7 @@
 
 [![NPM](https://nodei.co/npm/2acoin-crypto.png?downloads=true&stars=true)](https://nodei.co/npm/2acoin-crypto/)
 
-![Prerequisite](https://img.shields.io/badge/node-%3E%3D6-blue.svg) [![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)](https://github.com/2acoin/2acoin-crypto/graphs/commit-activity) [![License: GPL-3.0](https://img.shields.io/badge/License-GPL--3.0-yellow.svg)](https://github.com/2acoin/2acoin-crypto/blob/master/LICENSE) [![Twitter: TurtlePay](https://img.shields.io/twitter/follow/_TurtleCoin.svg?style=social)](https://twitter.com/_TurtleCoin)
+![Prerequisite](https://img.shields.io/badge/node-%3E%3D6-blue.svg) [![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)](https://github.com/2acoin/2acoin-crypto/graphs/commit-activity) [![License: GPL-3.0](https://img.shields.io/badge/License-GPL--3.0-yellow.svg)](https://github.com/2acoin/2acoin-crypto/blob/master/LICENSE) [![Twitter: 2ACoin](https://img.shields.io/twitter/follow/2acoin.svg?style=social)](https://twitter.com/2acoin)
 
 #### Master Build Status
 [![Build Status](https://github.com/2acoin/2acoin-crypto/workflows/CI%20Build%20Tests/badge.svg?branch=master)](https://github.com/2acoin/2acoin-crypto/actions)
@@ -32,21 +32,21 @@ This repository contains the necessary files to compile the cryptography library
 
 Read very careful if you want this to work right the first time.
 
-1) Open a *Windows Powershell* console as **Administrator**
-2) Run the command: `npm install -g windows-build-tools --vs2015`
+1) Open a *Windows Powershell* console as **Administrator**  
+2) Run the command: `npm install -g windows-build-tools --vs2015`  
    ***This will take a while. Sit tight.***
    
 #### Linux
 
 ### Installation
 
-```bash
+```bash  
 npm install 2acoin-crypto
 ```
 
 ### Intialization
 
-```javascript
+```javascript  
 const 2ACoinCrypto = require('2acoin-crypto')
 ```
 
@@ -64,53 +64,54 @@ However, if you wish to create *portable* binaries that can be shared between sy
 
 ##### Ubuntu, using GCC
 
-```bash
-sudo add-apt-repository ppa:ubuntu-toolchain-r/test -y
-sudo apt-get update
-sudo apt-get install aptitude -y
-sudo aptitude install -y build-essential git cmake
-git clone -b master --single-branch https://github.com/2acoin/2acoin-crypto
-cd 2acoin-crypto
-mkdir build
-cd build
-cmake ..
-make -j
-```
+    bash
+    sudo add-apt-repository ppa:ubuntu-toolchain-r/test -y
+    sudo apt-get update  
+    sudo apt-get install aptitude -y  
+    sudo aptitude install -y build-essential git cmake  
+    git clone -b master --single-branch https://github.com/2acoin/2acoin-crypto
+    cd 2acoin-crypto  
+    mkdir build  
+    cd build  
+    cmake ..  
+    make -j  
+
 
 The static library will be built as `lib2acoin-crypto.a` in the build folder.
 
 ##### Ubuntu, using Clang
 
-```bash
-sudo add-apt-repository ppa:ubuntu-toolchain-r/test -y
-wget -O - https://apt.llvm.org/llvm-snapshot.gpg.key | sudo apt-key add -
-```
+    bash  
+    sudo add-apt-repository ppa:ubuntu-toolchain-r/test -y  
+    wget -O - https://apt.llvm.org/llvm-snapshot.gpg.key | sudo apt-key add -  
+    
 
 You need to modify the below command for your version of ubuntu - see https://apt.llvm.org/
 
-* Ubuntu 14.04 (Trusty)
-- `sudo add-apt-repository "deb https://apt.llvm.org/trusty/ llvm-toolchain-trusty 6.0 main"`
+* Ubuntu 14.04 (Trusty)  
+ `sudo add-apt-repository "deb https://apt.llvm.org/trusty/ llvm-toolchain-trusty 6.0 main"`
 
-* Ubuntu 16.04 (Xenial)
-- `sudo add-apt-repository "deb https://apt.llvm.org/xenial/ llvm-toolchain-xenial 6.0 main"`
+* Ubuntu 16.04 (Xenial)  
+ `sudo add-apt-repository "deb https://apt.llvm.org/xenial/ llvm-toolchain-xenial 6.0 main"`
 
-* Ubuntu 18.04 (Bionic)
-- `sudo add-apt-repository "deb https://apt.llvm.org/bionic/ llvm-toolchain-bionic 6.0 main"`
+* Ubuntu 18.04 (Bionic)  
+ `sudo add-apt-repository "deb https://apt.llvm.org/bionic/ llvm-toolchain-bionic 6.0 main"  `
+  
 
-```bash
-sudo apt-get update
-sudo apt-get install aptitude -y
-sudo aptitude install -y -o Aptitude::ProblemResolver::SolutionCost='100*canceled-actions,200*removals'
-sudo aptitude install build-essential clang-6.0 libstdc++-7-dev git cmake
-export CC=clang-6.0
-export CXX=clang++-6.0
-git clone -b master --single-branch https://github.com/2acoin/2acoin-crypto
-cd 2acoin-crypto
-mkdir build
-cd build
-cmake ..
-make -j
-```
+    bash  
+    sudo apt-get update  
+    sudo apt-get install aptitude -y  
+    sudo aptitude install -y -o Aptitude::ProblemResolver::SolutionCost='100*canceled-actions,200*removals'  
+    sudo aptitude install build-essential clang-6.0 libstdc++-7-dev git cmake  
+    export CC=clang-6.0  
+    export CXX=clang++-6.0  
+    git clone -b master --single-branch https://github.com/2acoin/2acoin-crypto  
+    cd 2acoin-crypto  
+    mkdir build  
+    cd build  
+    cmake ..  
+    make -j  
+    
 
 The following library files will be created in the `build` folder:
 
@@ -123,14 +124,14 @@ Ensure you have the dependencies listed above.
 If you want to use clang, ensure you set the environment variables `CC` and `CXX`.
 See the ubuntu instructions for an example.
 
-```bash
-git clone -b master --single-branch https://github.com/2acoin/2acoin-crypto
-cd 2acoin-crypto
-mkdir build
-cd build
-cmake ..
-make -j
-```
+    bash
+    git clone -b master --single-branch https://github.com/2acoin/2acoin-crypto
+    cd 2acoin-crypto
+    mkdir build
+    cd build
+    cmake ..
+    make -j
+    
 
 The following library files will be created in the `build` folder:
 
@@ -144,18 +145,17 @@ The following library files will be created in the `build` folder:
 
 ##### Building
 
-```bash
-which brew || /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-brew install --force cmake boost llvm
-export CC=/usr/local/opt/llvm/bin/clang
-export CXX=/usr/local/opt/llvm/bin/clang++
-git clone -b master --single-branch https://github.com/2acoin/2acoin-crypto
-cd 2acoin-crypto
-mkdir build
-cd build
-cmake ..
-make
-```
+    bash  
+    which brew || /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"  
+    brew install --force cmake boost llvm  
+    export CC=/usr/local/opt/llvm/bin/clang  
+    export CXX=/usr/local/opt/llvm/bin/clang++  
+    git clone -b master --single-branch https://github.com/2acoin/2acoin-crypto  
+    cd 2acoin-crypto  
+    mkdir build  
+    cd build  
+    cmake ..  
+    make   
 
 The following library files will be created in the `build` folder:
 
@@ -170,15 +170,15 @@ The following library files will be created in the `build` folder:
 
 ##### Building
 
-- From the start menu, open 'x64 Native Tools Command Prompt for vs2017'.
-```
-cd <your_2acoin-crypto_directory>
-mkdir build
-cd build
-set PATH="C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin";%PATH%
-cmake -G "Visual Studio 15 2017 Win64" ..
-```
+- From the start menu, open 'x64 Native Tools Command Prompt for vs2017'.  
 
+    cd <your_2acoin-crypto_directory>  
+    mkdir build  
+    cd build  
+    set PATH="C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin";%PATH%  
+    cmake -G "Visual Studio 15 2017 Win64" ..  
+              
+    
 **Note:** If you have errors on this step about not being able to find the some libraries, you may need to update your cmake. Open 'Visual Studio Installer' and click 'Update'.
 
 `MSBuild 2acoin-crypto.sln /p:Configuration=Release /m`
@@ -197,12 +197,12 @@ You will need the following packages: CMake (2.8 or higher), make, and git.
 
 ### Compiling
 
-```bash
-git clone -b master --single-branch https://github.com/2acoin/2acoin-crypto
-cd 2acoin-crypto
-bash ./build_js.sh
-```
-
+    bash
+    git clone -b master --single-branch https://github.com/2acoin/2acoin-crypto
+    cd 2acoin-crypto
+    bash ./build_js.sh
+    
+    
 This script will install the necessary dependencies on your machine and then proceed to compile the library to Native Javascript and WASM.
 
 The following library files will be created in the `jsbuild` folder:
@@ -219,11 +219,12 @@ Cryptonote Developers, Bytecoin Developers, Monero Developers, Forknote Project,
 
 Hi 2ACoin contributor, thanks for forking and sending back Pull Requests. Extensive docs about contributing are in the works or elsewhere. For now this is the bit we need to get into all the files we touch. Please add it to the top of the files.
 
-```
-// Copyright (c) 2012-2017, The CryptoNote developers, The Bytecoin developers
-// Copyright (c) 2014-2018, The Monero Project
-// Copyright (c) 2018-2019, The TurtleCoin Developers
-// Copyright (c) 2019-2020, The 2ACoin Team
-//
-// Please see the included LICENSE file for more information.
-```
+    
+    // Copyright (c) 2012-2017, The CryptoNote developers, The Bytecoin developers
+    // Copyright (c) 2014-2018, The Monero Project
+    // Copyright (c) 2018-2019, The TurtleCoin Developers
+    // Copyright (c) 2019-2020, The 2ACoin Team
+    //
+    // Please see the included LICENSE file for more information.
+    
+    
