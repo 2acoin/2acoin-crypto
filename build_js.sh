@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 # Set up emscripten
 
@@ -17,10 +17,10 @@ fi
 
 # This applies a patch to fastcomp to make sure that the
 # environment is set correctly for react environments
-patch -N --verbose emsdk/fastcomp/emscripten/src/shell.js emscripten.patch
+patch -N --verbose emsdk/fastcomp/emscripten/src/shell.js scripts/emscripten.patch
 
 mkdir -p jsbuild && cd jsbuild && rm -rf *
 emconfigure cmake .. -DNO_AES=1 -DARCH=default -DBUILD_WASM=1 -DBUILD_JS=0
-make
+make && cp turtlecoin-crypto-wasm.js ../dist
 emconfigure cmake .. -DNO_AES=1 -DARCH=default -DBUILD_WASM=0 -DBUILD_JS=1
-make
+make && cp turtlecoin-crypto.js ../dist
